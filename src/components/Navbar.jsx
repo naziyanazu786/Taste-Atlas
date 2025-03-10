@@ -1,71 +1,41 @@
 {
-    "scripts": {
-       "build": "CI=false npm run build"
-     }
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.8.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.3.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "CI=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import './Navbar.css'
-
-const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('user');
-    setIsLoggedIn(false);
-    navigate('/login');
-  };
-
-  return (
-    <nav className="navbar navbar-expand-lg bg-white shadow-sm">
-      <div className="container-fluid">
-        <Link className="navbar-brand d-flex align-items-center" to="/">
-          <img 
-            src="/f9.webp"  // Updated to use the new logo
-            alt="Taste Atlas" 
-            className="navbar-brand-logo"
-          />
-        </Link>
-        
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        
-        <div className="collapse navbar-collapse" id="navbarNav">
-          {/* Center Menu Items */}
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/home">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/saved">Saved Recipes</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/create">Create Recipe</Link>
-            </li>
-          </ul>
-          
-          {/* Right-aligned Auth Buttons */}
-          <div className="navbar-nav auth-buttons">
-            {isLoggedIn ? (
-              <button 
-                className="nav-link auth-btn btn-outline-primary"
-                onClick={handleLogout}
-              >
-                Logout
-              </button>
-            ) : (
-              <>
-                <Link className="nav-link auth-btn btn-outline-primary" to="/login">Login</Link>
-                <Link className="nav-link auth-btn btn-primary" to="/register">Register</Link>
-              </>
-            )}
-          </div>
-        </div>
-      </div>
-    </nav>
-  )
 }
-
-export default Navbar
