@@ -1,5 +1,5 @@
 {
     "scripts": {
-      "build": "CI=false npm run build"
-    }
- }
+       "build": "CI=false npm run build"
+     }
+  }
