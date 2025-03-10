@@ -1,0 +1,90 @@
+.navbar {
+  padding: 0.5rem 1rem;
+  background-color: white;
+}
+
+.navbar-brand-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 1rem;
+  padding: 5px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  /* Alternative highlight style */
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.2);
+}
+
+/* Add hover effect */
+.navbar-brand-logo:hover {
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.5);
+  background-color: rgba(255, 152, 0, 0.1);
+}
+
+.nav-link {
+  color: #333;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff9800;
+}
+
+.navbar-nav .btn {
+  padding: 0.375rem 1.5rem;
+  border-radius: 20px;
+}
+
+.btn-outline-primary {
+  border-color: #ff9800;
+  color: #ff9800;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ff9800;
+  border-color: #ff9800;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #ff9800;
+  border-color: #ff9800;
+}
+
+.btn-primary:hover {
+  background-color: #f57c00;
+  border-color: #f57c00;
+}
+
+/* Auth buttons styling */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-btn {
+  padding: 0.375rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding: 1rem 0;
+  }
+  
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .auth-btn {
+    margin: 0.25rem 0;
+    width: 100%;
+    text-align: center;
+  }
+} 

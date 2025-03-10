@@ -1,0 +1,166 @@
+.create-recipe-container {
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+  background-color: #f5f5f5;
+}
+
+.recipe-form-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-form-card h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.ingredients-input {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ingredients-input input {
+  flex: 1;
+}
+
+.add-ingredient-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #f8f8f8;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.remove-ingredient-btn {
+  background: none;
+  border: none;
+  color: #ff5252;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.create-btn,
+.save-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.create-btn:hover {
+  background-color: #f57c00;
+}
+
+.save-btn:hover {
+  background-color: #388E3C;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-recipe-container {
+    padding: 1rem;
+  }
+
+  .recipe-form-card {
+    padding: 1rem;
+  }
+
+  .ingredients-input {
+    flex-direction: column;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .create-btn,
+  .save-btn {
+    width: 100%;
+  }
+
+  .form-select {
+    width: 100%;
+  }
+} 
